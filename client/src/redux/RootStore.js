@@ -1,31 +1,17 @@
-import { combineReducers, applyMiddleware, createStore } from "redux"
-const FETCH_PROFILE = "FETCH_PROFILE"
-const UPDATE_PROFILE = "UPDATE_PROFILE"
-
-const profileState = {
-    name: "null",
-}
-
-const fetchProfiles = () => ({
-    type: FETCH_PROFILE,
-    payload: "",
-})
-const updateProfile = (newProfile) => ({
-    type: UPDATE_PROFILE,
-    payload: newProfile,
-})
-
-const profileReducer = (state = profileState, action) => {
-    switch (action.type) {
-        case UPDATE_PROFILE:
-            return action.payload
-        default:
-            return state
-    }
-}
+import {
+    combineReducers,
+    applyMiddleware,
+    legacy_createStore as createStore,
+} from "redux"
+import { composeWithDevTools } from "redux-devtools-extension"
+import thunkMiddleware from "redux-thunk"
+import profileReducer from "./profileReducer"
 
 const rootReducer = combineReducers({
     profile: profileReducer,
 })
 
-export const store = createStore(rootReducer)
+export const store = createStore(
+    rootReducer,
+    composeWithDevTools(applyMiddleware(thunkMiddleware))
+)

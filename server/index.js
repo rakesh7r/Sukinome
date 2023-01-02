@@ -19,5 +19,6 @@ io.on("connection", (socket) => {
 app.get("/", (req, res) => {
     res.send("hey there!!")
 })
-
-server.listen(4000, () => console.log("server started"))
+server.listen(4000, () => {
+    console.log("server started")
+})
