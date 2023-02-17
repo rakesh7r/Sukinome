@@ -1,0 +1,16 @@
+/* imports here */
+
+:root {
+    --tiny: 6px;
+    --small: 10px;
+    --medium: 12px;
+    --large: 14px;
+    --x-large: 16px;
+    --huge: 18px;
+
+    --white: #ffffff;
+    --primary-bg: var(--white);
+    --secondary-bg: #fafafb;
+    --black: #000000;
+    --gray: #9a9a9a;
+}

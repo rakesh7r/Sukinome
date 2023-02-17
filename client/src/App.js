@@ -6,6 +6,7 @@ import Test from "./test/Test"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { getUser } from "./redux/profileReducer"
+import TopNav from "./components/TopNav"
 
 // export const socket = io.connect("http://localhost:4000")
 
@@ -15,13 +16,16 @@ function App() {
         dispatch(getUser())
     }, [])
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/test" element={<Test />} />
-            </Routes>
-        </Router>
+        <>
+            <Router>
+                <TopNav />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/test" element={<Test />} />
+                </Routes>
+            </Router>
+        </>
     )
 }
 
