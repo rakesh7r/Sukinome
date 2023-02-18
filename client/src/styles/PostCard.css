@@ -1,0 +1,50 @@
+.postcard-container {
+    margin-bottom: var(--medium);
+    background-color: white;
+    padding: var(--medium) 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.postcard-container header {
+    padding-bottom: var(--large);
+    padding-left: var(--large);
+    padding-right: var(--large);
+}
+
+.post-profile-pic {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 3rem;
+    object-fit: fill;
+    margin-right: var(--medium);
+}
+
+.postcard-container main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.postcard-container footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.postcard-container footer div>i {
+    padding: var(--medium);
+}
+
+.postcard-container footer div:last-child {
+    padding: var(--medium);
+}
+
+.post-picture {
+    min-height: 500px;
+    max-height: 700px;
+    width: fit-content;
+}

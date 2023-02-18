@@ -1,6 +1,6 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
-import { DatePicker, Tooltip } from "antd"
+import { DatePicker } from "antd"
 import Search from "antd/es/input/Search"
 import { useDispatch, useSelector } from "react-redux"
 import { FilledLocation, OutlinedLocation } from "../Assets"
@@ -51,9 +51,7 @@ function TopNav() {
                 </li>
                 <li>
                     <NavLink to="/">
-                        <Tooltip title="Home">
-                            <i className="bx bx-home huge-font" />
-                        </Tooltip>
+                        <i className="bx bx-home huge-font" />
                     </NavLink>
                 </li>
                 <li>

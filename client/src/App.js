@@ -1,30 +1,46 @@
-import "./App.css"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { Home, Profile } from "./screens"
-import io from "socket.io-client"
-import Test from "./test/Test"
-import { useEffect } from "react"
-import { useDispatch } from "react-redux"
-import { getUser } from "./redux/profileReducer"
-import TopNav from "./components/TopNav"
+import React, { useEffect } from "react"
+import {
+    Routes,
+    Route,
+    Switch,
+    Redirect,
+    Navigate,
+    BrowserRouter as Router,
+} from "react-router-dom"
+import Home from "./Pages/Home"
+import Profile from "./Pages/Profile"
+import Discover from "./Pages/Discover"
+import TopNav from "./Components/TopNav"
+import AddPost from "./Pages/AddPost"
+import { useDispatch, useSelector } from "react-redux"
+import { signin } from "./redux/Actions"
+import Login from "./Pages/Login"
 
-// export const socket = io.connect("http://localhost:4000")
-
-function App() {
+const App = () => {
+    const user = useSelector((state) => state.user)
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getUser())
+        if (!user) {
+            dispatch(signin())
+        }
     }, [])
     return (
         <>
-            <Router>
-                <TopNav />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/test" element={<Test />} />
-                </Routes>
-            </Router>
+            {user === null ? (
+                <Login />
+            ) : (
+                <Router>
+                    <TopNav />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="/discover" element={<Discover />} />
+                        <Route path="/addPost" element={<AddPost />} />
+                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/login" element={<Login />} />
+                    </Routes>
+                </Router>
+            )}
         </>
     )
 }

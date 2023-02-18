@@ -1,0 +1,26 @@
+.nav-outer {
+    padding: var(--medium) 30px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #efefef;
+    background-color: white;
+    margin-bottom: var(--small);
+    position: sticky;
+    top: 0px;
+
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav li a {
+    padding: 10px 20px;
+    color: black;
+}
+
+.nav li a.active {
+    /* color: #0095ff; */
+    background: -webkit-linear-gradient(#0059ff, #00ffd9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,7 +1,7 @@
 import React, { memo } from "react"
 import { useDispatch } from "react-redux"
 import useCounter from "../hooks/useCounter"
-import { signin, signout } from "../redux/profileReducer"
+import { signin, signout } from "../redux/Actions"
 
 const Test = () => {
     const dispatch = useDispatch()

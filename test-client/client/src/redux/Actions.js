@@ -1,3 +1,4 @@
+import { BYLOCATION, FETCHUSER, LOGIN, LOGOUT, UPDATE_PROFILE } from "./Types"
 import {
     getAuth,
     onAuthStateChanged,
@@ -9,9 +10,25 @@ import { fire } from "../Auth/firebaseConfig"
 const provider = new GoogleAuthProvider()
 const auth = getAuth(fire)
 
-const UPDATE_PROFILE = "UPDATE_PROFILE"
+export const login = () => ({
+    type: LOGIN,
+    payload: "",
+})
 
-const profileState = null
+export const logout = () => ({
+    type: LOGOUT,
+    payload: "",
+})
+
+export const fetchUser = () => ({
+    type: FETCHUSER,
+    payload: "",
+})
+
+export const updateByLocation = (flag) => ({
+    type: BYLOCATION,
+    payload: flag,
+})
 
 export const updateProfile = (newProfile) => ({
     type: UPDATE_PROFILE,
@@ -46,13 +63,3 @@ export const getUser = () => async (dispatch) => {
         else dispatch(updateProfile(null))
     })
 }
-
-const profileReducer = (state = profileState, action) => {
-    switch (action.type) {
-        case UPDATE_PROFILE:
-            return action.payload
-        default:
-            return state
-    }
-}
-export default profileReducer
