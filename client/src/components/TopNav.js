@@ -1,6 +1,6 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
-import { DatePicker, Tooltip } from "antd"
+import { Tooltip } from "antd"
 import Search from "antd/es/input/Search"
 import { useDispatch, useSelector } from "react-redux"
 import { FilledLocation, OutlinedLocation } from "../Assets"

@@ -3,6 +3,8 @@
 @import url("./Body.css");
 @import url("./Home.css");
 @import url("./PostCard.css");
+@import url("./Profile.css");
+@import url("./ProfilePostCard.css");
 
 :root {
     --small: 8px;
@@ -12,6 +14,17 @@
     --huge: 20px;
 }
 
+.br {
+    background-color: red;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.width-100 {
+    width: 100%;
+}
 
 .huge-font {
     font-size: 24px;
@@ -22,8 +35,21 @@
     flex-direction: row;
 }
 
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .space-between {
     justify-content: space-between;
+}
+
+.justify-flex-start {
+    justify-content: flex-start;
 }
 
 .p-10 {
@@ -38,12 +64,21 @@
     justify-content: center;
 }
 
+.justify-space-between {
+    justify-content: space-between;
+}
+
 .curved-small {
     border-radius: var(--small);
 }
 
 .curved-large {
     border-radius: var(--large);
+}
+
+.round-image {
+    border-radius: 100%;
+    object-fit: fill;
 }
 
 .padding-small {
@@ -54,8 +89,8 @@
     padding: var(--large);
 }
 
-.float-all-sides {
-    box-shadow: 2px 2px 2px 2px #f2f2f2;
+.float-effect {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* width */
@@ -95,8 +130,27 @@
     padding: var(--medium) 0;
 }
 
-.postcard-container i:hover {
-    background-color: #f1f1f1;
-    border-radius: 500px;
-    padding: 10px;
+
+.m-b-huge {
+    margin-bottom: var(--huge);
+}
+
+.m-b-large {
+    margin-bottom: var(--large);
+}
+
+.m-b-medium {
+    margin-bottom: var(--medium);
+}
+
+.m-b-small {
+    margin-bottom: var(--small);
+}
+
+.m-large {
+    margin: var(--large);
+}
+
+.m-small {
+    margin: var(--small);
 }

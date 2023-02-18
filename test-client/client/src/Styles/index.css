@@ -54,7 +54,7 @@
     padding: var(--large);
 }
 
-.float-all-sides {
+.float-effect {
     box-shadow: 2px 2px 2px 2px #f2f2f2;
 }
 

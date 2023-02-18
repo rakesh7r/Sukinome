@@ -3,7 +3,7 @@ import { One, Two } from "../Assets"
 
 function PostCard({ username, image, time }) {
     return (
-        <div className="postcard-container curved-small float-all-sides">
+        <div className="postcard-container curved-small float-effect">
             <header className="flex-row space-between">
                 <div className="flex-row justify-center align-center">
                     <img className="post-profile-pic" src={Two} alt="" />

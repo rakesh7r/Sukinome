@@ -1,4 +1,4 @@
-import { BYLOCATION, FETCHUSER, LOGIN, LOGOUT, UPDATE_PROFILE } from "./Types"
+import { BYLOCATION, FETCHUSER, UPDATE_PROFILE } from "./Types"
 import {
     getAuth,
     onAuthStateChanged,
@@ -50,6 +50,9 @@ export const signout = () => async (dispatch) => {
 export const getUser = () => async (dispatch) => {
     await onAuthStateChanged(auth, (user) => {
         if (user) dispatch(updateProfile(user))
-        else dispatch(updateProfile(null))
+        else {
+            dispatch(updateProfile(null))
+            dispatch(signin())
+        }
     })
 }
