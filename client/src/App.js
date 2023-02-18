@@ -10,12 +10,11 @@ import {
 import Home from "./Pages/Home"
 import Profile from "./Pages/Profile"
 import Discover from "./Pages/Discover"
-import TopNav from "./Components/TopNav"
 import AddPost from "./Pages/AddPost"
 import { useDispatch, useSelector } from "react-redux"
 import { signin } from "./redux/Actions"
 import Login from "./Pages/Login"
-
+import TopNav from "./components/TopNav"
 const App = () => {
     const user = useSelector((state) => state.user)
     const dispatch = useDispatch()
