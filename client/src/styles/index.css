@@ -5,6 +5,7 @@
 @import url("./PostCard.css");
 @import url("./Profile.css");
 @import url("./ProfilePostCard.css");
+@import url("./AddPost.css");
 
 :root {
     --small: 8px;
@@ -18,12 +19,28 @@
     background-color: red;
 }
 
+.bw {
+    background-color: white;
+}
+
 .width-90 {
     width: 90%;
 }
 
 .width-100 {
     width: 100%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.h-100v {
+    height: 100vh;
 }
 
 .huge-font {
@@ -141,6 +158,22 @@
 
 .m-b-medium {
     margin-bottom: var(--medium);
+}
+
+.m-t-small {
+    margin-top: var(--small);
+}
+
+.m-t-huge {
+    margin-top: var(--huge);
+}
+
+.m-t-large {
+    margin-top: var(--large);
+}
+
+.m-t-medium {
+    margin-top: var(--medium);
 }
 
 .m-b-small {

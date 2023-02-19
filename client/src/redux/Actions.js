@@ -1,4 +1,4 @@
-import { BYLOCATION, FETCHUSER, UPDATE_PROFILE } from "./Types"
+import { BYLOCATION, FETCHUSER, MODAL_OPEN, UPDATE_PROFILE } from "./Types"
 import {
     getAuth,
     onAuthStateChanged,
@@ -56,3 +56,8 @@ export const getUser = () => async (dispatch) => {
         }
     })
 }
+
+export const setModalOpen = (flag) => ({
+    type: MODAL_OPEN,
+    payload: flag,
+})

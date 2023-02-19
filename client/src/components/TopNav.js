@@ -25,35 +25,35 @@ function TopNav() {
             />
             <ul className="nav">
                 <li>
-                    <NavLink>
-                        {byLocation ? (
-                            <img
-                                src={OutlinedLocation}
-                                style={{ height: "20px" }}
-                                className="loc-icon"
-                                alt="byPos"
-                                onClick={() => {
-                                    dispatch(updateByLocation(!byLocation))
-                                }}
-                            />
-                        ) : (
-                            <img
-                                src={FilledLocation}
-                                style={{ height: "20px" }}
-                                className="loc-icon"
-                                alt="byPos"
-                                onClick={() => {
-                                    dispatch(updateByLocation(!byLocation))
-                                }}
-                            />
-                        )}
-                    </NavLink>
+                    <Tooltip title={byLocation ? "Friends" : "ByLocation"}>
+                        <NavLink>
+                            {byLocation ? (
+                                <img
+                                    src={OutlinedLocation}
+                                    style={{ height: "20px" }}
+                                    className="loc-icon"
+                                    alt="byPos"
+                                    onClick={() => {
+                                        dispatch(updateByLocation(!byLocation))
+                                    }}
+                                />
+                            ) : (
+                                <img
+                                    src={FilledLocation}
+                                    style={{ height: "20px" }}
+                                    className="loc-icon"
+                                    alt="byPos"
+                                    onClick={() => {
+                                        dispatch(updateByLocation(!byLocation))
+                                    }}
+                                />
+                            )}
+                        </NavLink>
+                    </Tooltip>
                 </li>
                 <li>
                     <NavLink to="/">
-                        <Tooltip title="Home">
-                            <i className="bx bx-home huge-font" />
-                        </Tooltip>
+                        <i className="bx bx-home huge-font" />
                     </NavLink>
                 </li>
                 <li>

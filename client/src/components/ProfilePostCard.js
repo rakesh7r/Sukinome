@@ -7,12 +7,12 @@ function ProfilePostCard() {
             <img src={One} alt="" className="float-effect" />
             <footer className="flex-row align-center justify-space-between">
                 <div className="flex-row align-center">
-                    <i className="bx bx-heart huge-font" />{" "}
+                    <i className="bx bx-heart huge-font" />
                     <span style={{ marginTop: -3, marginLeft: 5 }}>{123}</span>
                 </div>
                 <div className="flex-row align-center">
-                    <i className="bx bx-star huge-font" />{" "}
-                    <span style={{ marginTop: -3, marginLeft: 5 }}>{123}</span>
+                    <i className="bx bx-star huge-font" />
+                    <span style={{ marginTop: 0, marginLeft: 5 }}>{123}</span>
                 </div>
             </footer>
         </div>
